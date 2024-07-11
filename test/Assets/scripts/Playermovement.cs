@@ -13,6 +13,8 @@ public class Playermovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundcheck;
     [SerializeField] private LayerMask groundlayer;
+    [SerializeField] private Transform rightwallcheck;
+    [SerializeField] private Transform leftwallcheck;
 
 
     // Update is called once per frame
@@ -25,10 +27,21 @@ public class Playermovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
+        if (Input.GetButtonDown("Jump") && rightwall())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+
+        if (Input.GetButtonDown("Jump") && leftwall())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+        
         Flip();
     }
 
@@ -41,6 +54,16 @@ public class Playermovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundcheck.position, 0.2f, groundlayer);
+    }
+    
+    private bool rightwall()
+    {
+        return Physics2D.OverlapCircle(rightwallcheck.position, 0.2f, groundlayer);
+    }
+
+    private bool leftwall()
+    {
+        return Physics2D.OverlapCircle(leftwallcheck.position, 0.2f, groundlayer);
     }
 
     private void Flip()
