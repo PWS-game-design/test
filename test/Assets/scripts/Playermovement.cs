@@ -10,6 +10,7 @@ public class Playermovement : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     Vector4 orginalPosition;
+    private float count;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundcheck;
@@ -21,7 +22,7 @@ public class Playermovement : MonoBehaviour
     void Start()
     {
     orginalPosition = new Vector4(rb.transform.position.x, rb.transform.position.y);
-
+    count = 0;
     }
     // Update is called once per frame
     void Update()
@@ -52,6 +53,7 @@ public class Playermovement : MonoBehaviour
         if(rb.transform.position.y < -20f)
         {
             rb.transform.position = orginalPosition;
+            count = count + 1;
         }
 
         Flip();
