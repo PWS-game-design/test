@@ -9,14 +9,20 @@ public class Playermovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
+    Vector4 orginalPosition;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundcheck;
     [SerializeField] private LayerMask groundlayer;
     [SerializeField] private Transform rightwallcheck;
     [SerializeField] private Transform leftwallcheck;
+    [SerializeField] private Transform position;
+    
+    void Start()
+    {
+    orginalPosition = new Vector4(rb.transform.position.x, rb.transform.position.y);
 
-
+    }
     // Update is called once per frame
     void Update()
     {
@@ -42,6 +48,12 @@ public class Playermovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
         
+        
+        if(rb.transform.position.y < -20f)
+        {
+            rb.transform.position = orginalPosition;
+        }
+
         Flip();
     }
 
@@ -76,4 +88,6 @@ public class Playermovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+
 }

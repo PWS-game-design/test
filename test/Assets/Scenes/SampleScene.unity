@@ -315,6 +315,7 @@ MonoBehaviour:
     m_Bits: 64
   rightwallcheck: {fileID: 734837440}
   leftwallcheck: {fileID: 1556792753}
+  position: {fileID: 1198813382}
 --- !u!61 &1198813379
 BoxCollider2D:
   m_ObjectHideFlags: 0
