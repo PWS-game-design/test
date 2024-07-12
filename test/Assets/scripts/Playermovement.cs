@@ -28,7 +28,7 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!PauseMenu.isPaused)
+        if (!pausemenu.isPaused)
         {
 
         
@@ -68,7 +68,10 @@ public class Playermovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!pausemenu.isPaused)
+        {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
     }
 
     private bool IsGrounded()

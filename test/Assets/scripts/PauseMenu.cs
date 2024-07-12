@@ -4,6 +4,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+
 public class pausemenu : MonoBehaviour
 {
     public GameObject pauseMenu;
@@ -19,13 +20,13 @@ public class pausemenu : MonoBehaviour
     {
        if (Input.GetKeyDown(KeyCode.Escape))
        {
-            if(isPaused)
+            if(!isPaused)
             {
-                ResumeGame();
+                PauseGame();
             }
             else
             {
-                PauseGame();
+                ResumeGame();
             }
             
        } 
