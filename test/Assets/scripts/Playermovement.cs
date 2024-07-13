@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Playermovement : MonoBehaviour
@@ -27,42 +28,50 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (!pausemenu.isPaused)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
 
-        if (Input.GetButtonDown("Jump") && rightwall())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-
-        if (Input.GetButtonDown("Jump") && leftwall())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
         
-        
-        if(rb.transform.position.y < -20f)
-        {
-            rb.transform.position = orginalPosition;
-            count = count + 1;
-        }
+            horizontal = Input.GetAxisRaw("Horizontal");
+
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            }
+
+            if (Input.GetButtonDown("Jump") && rightwall())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            }
+
+            if (Input.GetButtonDown("Jump") && leftwall())
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            }
+
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            }
+            
+            
+            if(rb.transform.position.y < -20f)
+            {
+                rb.transform.position = orginalPosition;
+                count = count + 1;
+            }
 
         Flip();
+        }
     }
 
 
     private void FixedUpdate()
     {
+        if (!pausemenu.isPaused)
+        {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
     }
 
     private bool IsGrounded()
