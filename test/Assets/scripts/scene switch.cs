@@ -10,4 +10,9 @@ public void SwitchScene(string sceneName)
     SceneManager.LoadScene(sceneName);
 }
 
+public void quitgame()
+{
+    Application.Quit();
+}
+
 }
