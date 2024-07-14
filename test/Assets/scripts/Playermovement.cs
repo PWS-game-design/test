@@ -10,7 +10,7 @@ public class Playermovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
-    Vector4 orginalPosition;
+    Vector2 orginalPosition;
     private float count;
 
     [SerializeField] private Rigidbody2D rb;
