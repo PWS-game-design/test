@@ -579,8 +579,6 @@ GameObject:
   - component: {fileID: 477035201}
   - component: {fileID: 477035200}
   - component: {fileID: 477035199}
-  - component: {fileID: 477035198}
-  - component: {fileID: 477035197}
   m_Layer: 5
   m_Name: back
   m_TagString: Untagged
@@ -608,31 +606,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000061035156, y: -288}
   m_SizeDelta: {x: 614.7611, y: 146.4189}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &477035197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477035195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1348353a927244eae8e64bd79fec2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &477035198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477035195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84efff7586e700c439649d267b7c9afd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 738824450}
 --- !u!114 &477035199
 MonoBehaviour:
   m_ObjectHideFlags: 0
