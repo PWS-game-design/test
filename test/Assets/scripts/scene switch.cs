@@ -12,6 +12,7 @@ public void SwitchScene(string sceneName)
 
 public void quitgame()
 {
+    Debug.Log("quit");
     Application.Quit();
 }
 

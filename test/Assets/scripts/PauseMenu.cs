@@ -13,6 +13,9 @@ public class pausemenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+
     }
 
     // Update is called once per frame
@@ -50,6 +53,7 @@ public class pausemenu : MonoBehaviour
 
     public void QuitGame()
     {
+        Debug.Log("quit");
         Application.Quit();
     }
 }
