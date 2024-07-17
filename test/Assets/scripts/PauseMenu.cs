@@ -26,12 +26,10 @@ public class pausemenu : MonoBehaviour
         {
             if(isPaused)
             {
-                Debug.Log("resume");
                 ResumeGame();
             }
             else
             {
-                Debug.Log("Pause");
                 PauseGame();
             }
                 
@@ -56,19 +54,16 @@ public class pausemenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("quit");
         Application.Quit();
     }
     public void settingsmenu()
     {
         if(settings == true)
         {
-            Debug.Log("false");
             settings = false;
         }
         else
         {
-            Debug.Log("true");
             settings = true;
         }
     }
