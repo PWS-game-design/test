@@ -22,7 +22,7 @@ public class Playermovement : MonoBehaviour
     
     void Start()
     {
-    orginalPosition = new Vector4(rb.transform.position.x, rb.transform.position.y);
+    orginalPosition = new Vector2(rb.transform.position.x, rb.transform.position.y);
     count = 0;
     }
     // Update is called once per frame
