@@ -10,6 +10,7 @@ public class deathcount : MonoBehaviour
 {
     int count = 0;
 
+
 public TextMeshProUGUI ValueText;
 [SerializeField] private Rigidbody2D rb;
 
@@ -22,7 +23,8 @@ public TextMeshProUGUI ValueText;
     // Update is called once per frame
     void Update()
     {
-          if(rb.transform.position.y < -20f)
+
+        if(rb.transform.position.y < -20f)
         {
             count = count + 1;
             ValueText.text = count.ToString();

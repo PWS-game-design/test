@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Playermovement : MonoBehaviour
 {
@@ -11,7 +14,9 @@ public class Playermovement : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     Vector2 orginalPosition;
-    private float count;
+
+    private float fcount;
+
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundcheck;
@@ -19,19 +24,28 @@ public class Playermovement : MonoBehaviour
     [SerializeField] private Transform rightwallcheck;
     [SerializeField] private Transform leftwallcheck;
     [SerializeField] private Transform position;
+    [SerializeField] private AudioSource landing;
+
+
     
     void Start()
     {
     orginalPosition = new Vector2(rb.transform.position.x, rb.transform.position.y);
-    count = 0;
+    //Time.timeScale = .1f;
+
     }
     // Update is called once per frame
     void Update()
     {
-        if (!pausemenu.isPaused)
-        {
 
         
+
+        if (!pausemenu.isPaused)
+        fcount++;
+        {
+
+
+
             horizontal = Input.GetAxisRaw("Horizontal");
 
             if (Input.GetButtonDown("Jump") && IsGrounded())
@@ -53,15 +67,18 @@ public class Playermovement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             }
-            
-            
-            if(rb.transform.position.y < -20f)
+
+
+            if (rb.transform.position.y < -20f)
             {
                 rb.transform.position = orginalPosition;
-                count = count + 1;
             }
 
-        Flip();
+            Flip();
+        }
+        if (!IsGrounded() && fcount > 550)
+        {
+            landing.Play();
         }
     }
 

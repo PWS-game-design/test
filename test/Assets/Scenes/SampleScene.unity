@@ -3486,6 +3486,7 @@ MonoBehaviour:
   rightwallcheck: {fileID: 734837440}
   leftwallcheck: {fileID: 1556792753}
   position: {fileID: 1198813382}
+  landing: {fileID: 1198813383}
 --- !u!61 &1198813379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3638,9 +3639,9 @@ AudioSource:
   m_GameObject: {fileID: 1198813377}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  OutputAudioMixerGroup: {fileID: -3209325663412256653, guid: 5f0c75e9da20602438d3b1d6a5cbdf90, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e64381073b215554595540dd6c11fc0d, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3856,7 +3857,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 713.2122, y: 480.05667}
+  m_AnchoredPosition: {x: 713.2122, y: 463.26}
   m_SizeDelta: {x: 493.5757, y: 99.3867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1351112573
