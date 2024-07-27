@@ -41,7 +41,10 @@ public class Playermovement : MonoBehaviour
         
 
         if (!pausemenu.isPaused)
-        fcount++;
+        if(fcount < 560)
+        {
+            fcount++;
+        }
         {
 
 
@@ -93,7 +96,7 @@ public class Playermovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundcheck.position, 0.2f, groundlayer);
+        return Physics2D.OverlapCircle(groundcheck.position, 1.15f, groundlayer);
     }
     
     private bool rightwall()
