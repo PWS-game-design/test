@@ -31,7 +31,7 @@ public class Playermovement : MonoBehaviour
     void Start()
     {
     orginalPosition = new Vector2(rb.transform.position.x, rb.transform.position.y);
-    //Time.timeScale = .1f;
+
 
     }
     // Update is called once per frame
