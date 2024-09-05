@@ -6,16 +6,14 @@ public class CollinPatrol : MonoBehaviour
 {
     public GameObject pointA;
     public GameObject pointB;
-    private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     private Transform currentPoint;
-    Vector2 orginalPosition;
-    [SerializeField] private Transform OGP;
     public float speed;
+    Vector2 originalPosition;
     // Start is called before the first frame update
     void Start()
     {
-        orginalPosition = new Vector2(rb.transform.OGP.x, rb.transform.OGP.y);
-        rb = GetComponent<Rigidbody2D>();
+        originalPosition = new Vector2(rb.transform.position.x, rb.transform.position.y);
         currentPoint = pointB.transform;
     }
 
@@ -23,13 +21,27 @@ public class CollinPatrol : MonoBehaviour
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
-        if(currentPoint == pointB.transform)
+        if(rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(speed, 0);
+            if(currentPoint == pointB.transform)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y * 0.5f);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y * 0.5f);
+            }
         }
         else
         {
-            rb.velocity = new Vector2(-speed, 0);
+            if(currentPoint == pointB.transform)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+            }
         }
 
         if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
@@ -40,9 +52,9 @@ public class CollinPatrol : MonoBehaviour
         {
             currentPoint = pointB.transform;
         }
-         if(rb.transform.position.y < -10f)
+        if(rb.transform.position.y < -20f)
         {
-            rb.transform.position = orginalPosition;
+            rb.transform.position = originalPosition;
         }
     }
     private void OnDrawGizmos()
