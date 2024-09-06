@@ -31,9 +31,11 @@ public TextMeshProUGUI ValueText;
             count = count + 1;
             ValueText.text = count.ToString();
         }  
-        if(count == 10)
+        if(count == 5)
         {
+            Destroy(AudioManager.instance.gameObject);
             SceneManager.LoadScene("Frosty-Quest");
+
         }
     }
 }
