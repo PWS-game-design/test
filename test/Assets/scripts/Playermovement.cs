@@ -20,6 +20,7 @@ public class Playermovement : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundcheck;
+    [SerializeField] private Transform groundcheckup;
     [SerializeField] private LayerMask groundlayer;
     [SerializeField] private Transform rightwallcheck;
     [SerializeField] private Transform leftwallcheck;
@@ -96,7 +97,7 @@ public class Playermovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundcheck.position, 1.15f, groundlayer);
+        return Physics2D.OverlapArea(groundcheck.position, groundcheckup.position, groundlayer);
     }
     
     private bool rightwall()
@@ -107,6 +108,7 @@ public class Playermovement : MonoBehaviour
     private bool leftwall()
     {
         return Physics2D.OverlapCircle(leftwallcheck.position, 0.2f, groundlayer);
+
     }
 
     private void Flip()
@@ -118,6 +120,15 @@ public class Playermovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(groundcheck.transform.position, 1.18f);
+        Gizmos.DrawWireSphere(rightwallcheck.transform.position, 0.2f);
+        Gizmos.DrawWireSphere(leftwallcheck.transform.position, 0.2f);
+
+
     }
 
 
