@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class deathcount : MonoBehaviour
@@ -29,5 +31,11 @@ public TextMeshProUGUI ValueText;
             count = count + 1;
             ValueText.text = count.ToString();
         }  
+        if(count == 5)
+        {
+            Destroy(AudioManager.instance.gameObject);
+            SceneManager.LoadScene("Frosty-Quest");
+
+        }
     }
 }
