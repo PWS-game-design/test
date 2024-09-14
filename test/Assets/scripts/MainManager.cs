@@ -5,6 +5,7 @@ using System;
 using Unity.VisualScripting;
 public class MainManager : MonoBehaviour
 {
+    public bool abletopause {get; private set;}
     public static MainManager Instance;
     void Awake()
     {
@@ -15,6 +16,7 @@ public class MainManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        changepause(false);
     }
 
     // Start is called before the first frame update
@@ -27,5 +29,10 @@ public class MainManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void changepause(bool newstate)
+    {
+        abletopause = newstate;
     }
 }

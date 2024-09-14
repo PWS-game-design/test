@@ -9,6 +9,17 @@ using UnityEngine.Playables;
 
 public class Playermovement : MonoBehaviour
 {
+    public static Playermovement Instance;
+    void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
@@ -129,6 +140,12 @@ public class Playermovement : MonoBehaviour
         Gizmos.DrawWireSphere(leftwallcheck.transform.position, 0.2f);
 
 
+    }
+
+    public void SetPlayerPos(Vector3 newpos)
+    {
+        //rb.velocity = Vector2.zero;
+        transform.position = newpos;
     }
 
 

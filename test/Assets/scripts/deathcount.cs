@@ -26,14 +26,16 @@ public TextMeshProUGUI ValueText;
     void Update()
     {
 
-        if(rb.transform.position.y < -20f)
+        if(Playermovement.Instance.transform.position.y < -20f)
         {
             count = count + 1;
             ValueText.text = count.ToString();
         }  
         if(count == 5)
         {
-            Destroy(AudioManager.instance.gameObject);
+
+            AudioManager.instance.Play("CollinTheme");
+            AudioManager.instance.Stop("Theme");
             SceneManager.LoadScene("Frosty-Quest");
 
         }
