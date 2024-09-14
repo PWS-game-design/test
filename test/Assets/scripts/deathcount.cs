@@ -31,7 +31,7 @@ public TextMeshProUGUI ValueText;
             count = count + 1;
             ValueText.text = count.ToString();
         }  
-        if(count == 1)
+        if(count == 5)
         {
 
             AudioManager.instance.Play("CollinTheme");
