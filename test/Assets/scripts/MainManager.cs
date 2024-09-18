@@ -22,13 +22,20 @@ public class MainManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    if(abletopause)
+    {
+        Playermovement.Instance.Player.SetActive(true);
+    }
+    if(!abletopause)
+    {
+        Playermovement.Instance.Player.SetActive(false);
+    }        
     }
 
     public void changepause(bool newstate)

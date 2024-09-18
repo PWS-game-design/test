@@ -37,6 +37,7 @@ public class Playermovement : MonoBehaviour
     [SerializeField] private Transform leftwallcheck;
     [SerializeField] private Transform position;
     [SerializeField] private AudioSource landing;
+    public GameObject Player;
 
 
     
@@ -49,6 +50,7 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
 
         
 

@@ -5,8 +5,10 @@ using UnityEngine.Audio;
 
 public class settings : MonoBehaviour
 {
+    public static settings instance;
     public AudioMixer audioMixer;
-
+    public GameObject Settings;
+    
     
 
     public void SetVolume(float volume)
