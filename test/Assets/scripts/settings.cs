@@ -22,15 +22,18 @@ public class settings : MonoBehaviour
 
     public void SetVolume(float volume)
     {
+
         audioMixer.SetFloat("volume", volume);
         
     }
     public void SetMusic(float volume)
     {
+
         audioMixer.SetFloat("Music", volume);
     }
     public void SetSFX(float volume)
     {
+
         audioMixer.SetFloat("SFX", volume);
     }
 
