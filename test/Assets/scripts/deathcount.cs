@@ -13,24 +13,26 @@ public class deathcount : MonoBehaviour
     int count = 0;
 
 
-public TextMeshProUGUI ValueText;
-[SerializeField] private Rigidbody2D rb;
+    public TextMeshProUGUI ValueText;
+    private Rigidbody2D rb;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = Playermovement.Instance.rb;
+        Playermovement.Instance.onDeath += OnDeath;
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void OnDeath()
     {
 
-        if(Playermovement.Instance.transform.position.y < -20f)
-        {
+
             count = count + 1;
             ValueText.text = count.ToString();
-        }  
+
         if(count == 5)
         {
 
@@ -39,5 +41,9 @@ public TextMeshProUGUI ValueText;
             SceneManager.LoadScene("Frosty-Quest");
 
         }
+    }
+    private void OnDisable() 
+    {
+        Playermovement.Instance.onDeath -= OnDeath;
     }
 }

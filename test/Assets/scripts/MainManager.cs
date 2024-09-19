@@ -5,6 +5,8 @@ using System;
 using Unity.VisualScripting;
 public class MainManager : MonoBehaviour
 {
+
+    public Action <bool> onPauseChange;
     public bool abletopause {get; private set;}
     public static MainManager Instance;
     void Awake()
@@ -17,29 +19,39 @@ public class MainManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         changepause(false);
+        onPauseChange += PlayerState;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-    if(abletopause)
-    {
-        Playermovement.Instance.Player.SetActive(true);
-    }
-    if(!abletopause)
-    {
-        Playermovement.Instance.Player.SetActive(false);
-    }        
-    }
+
+
 
     public void changepause(bool newstate)
     {
         abletopause = newstate;
+        onPauseChange?.Invoke(abletopause);
+
+    }
+
+    public void PlayerState(bool pausstate)
+    {
+        if(Playermovement.Instance == null)
+        {
+            return;
+        }
+    
+        if(pausstate)
+        {
+            Playermovement.Instance.Player.SetActive(true);
+        }
+        else
+        {
+            Playermovement.Instance.Player.SetActive(false);
+        }
+    }
+    private void OnDisable() 
+    {
+        onPauseChange -= PlayerState;
     }
 }

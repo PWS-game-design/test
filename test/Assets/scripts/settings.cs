@@ -9,7 +9,16 @@ public class settings : MonoBehaviour
     public AudioMixer audioMixer;
     public GameObject Settings;
     
-    
+    void Awake()
+    {
+        if(instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void SetVolume(float volume)
     {
