@@ -18,7 +18,7 @@ public class SmoothCameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if(player== null) 
+        if(player == null) 
             return;
 
         Vector3 targetPos = player.position + offset;

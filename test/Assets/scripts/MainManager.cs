@@ -18,7 +18,7 @@ public class MainManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        changepause(false);
+        Changepause(false);
         onPauseChange += PlayerState;
     }
 
@@ -27,7 +27,7 @@ public class MainManager : MonoBehaviour
 
 
 
-    public void changepause(bool newstate)
+    public void Changepause(bool newstate)
     {
         abletopause = newstate;
         onPauseChange?.Invoke(abletopause);
@@ -36,22 +36,22 @@ public class MainManager : MonoBehaviour
 
     public void PlayerState(bool pausstate)
     {
-        if(Playermovement.Instance == null)
+
+        if(PlayerManager.Instance == null)
         {
             return;
         }
     
         if(pausstate)
         {
-            Playermovement.Instance.Player.SetActive(true);
+            PlayerManager.Instance.Player.SetActive(true);
+
         }
         else
         {
-            Playermovement.Instance.Player.SetActive(false);
+            PlayerManager.Instance.Player.SetActive(false);
+
         }
     }
-    private void OnDisable() 
-    {
-        onPauseChange -= PlayerState;
-    }
+
 }

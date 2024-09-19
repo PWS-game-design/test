@@ -1745,18 +1745,6 @@ MonoBehaviour:
           m_StringArgument: main menu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
-        m_MethodName: settingsmenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 431306317}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: ReturnToLastMenu
@@ -1816,6 +1804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392104268}
+  - component: {fileID: 392104269}
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -1832,13 +1821,27 @@ Transform:
   m_GameObject: {fileID: 392104267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 467.0897, y: 309.06827, z: 0.70566183}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1509036484}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392104269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392104267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5b0e701a1d70f4e90896c35d905a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 392104267}
+  rb: {fileID: 1509036482}
 --- !u!1 &396538240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4310,7 +4313,6 @@ MonoBehaviour:
   leftwallcheck: {fileID: 396538241}
   position: {fileID: 1509036484}
   landing: {fileID: 1509036479}
-  Player: {fileID: 392104267}
 --- !u!61 &1509036481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4444,7 +4446,7 @@ Transform:
   m_GameObject: {fileID: 1509036478}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -467.0897, y: -309.06827, z: -0.70566183}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4562,10 +4564,10 @@ MonoBehaviour:
           m_StringArgument: SampleScene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 431306316}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
-        m_MethodName: changepause
-        m_Mode: 6
+      - m_Target: {fileID: 857291710}
+        m_TargetAssemblyTypeName: mainmenusetting, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4941,7 +4943,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 431306316}
         m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
-        m_MethodName: changepause
+        m_MethodName: Changepause
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4955,6 +4957,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

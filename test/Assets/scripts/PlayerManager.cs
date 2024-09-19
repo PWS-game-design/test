@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerManager : MonoBehaviour
     
 {
+        public Action onDeath;
     public static PlayerManager Instance;
-    [SerializeField] private Rigidbody2D rb;
-    // Start is called before the first frame update
+    public GameObject Player;
+    [SerializeField] public Rigidbody2D rb;
+
     void Awake()
     {
                 if(Instance != null)
@@ -17,6 +20,7 @@ public class PlayerManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        gameObject.SetActive(false);
     }
     void Start()
     {
@@ -27,5 +31,11 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+        public void SetPlayerPos(Vector3 newpos)
+    {
+        rb.velocity = Vector2.zero;
+        transform.position = newpos;
     }
 }

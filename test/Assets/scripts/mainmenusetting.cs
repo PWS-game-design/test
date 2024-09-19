@@ -12,11 +12,6 @@ public class mainmenusetting : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     public void MainSettings()
@@ -24,6 +19,11 @@ public class mainmenusetting : MonoBehaviour
         canvas.SetActive(false);
         settings.instance.Settings.SetActive(true);
         MenuManager.instance.menus.Add(canvas);
+    }
+
+    public void PlayButton()
+    {
+        MainManager.Instance.Changepause(true);
     }
 
 }

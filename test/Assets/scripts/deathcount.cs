@@ -20,8 +20,8 @@ public class deathcount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = Playermovement.Instance.rb;
-        Playermovement.Instance.onDeath += OnDeath;
+        rb = PlayerManager.Instance.rb;
+        PlayerManager.Instance.onDeath += OnDeath;
     }
 
     // Update is called once per frame
@@ -44,6 +44,6 @@ public class deathcount : MonoBehaviour
     }
     private void OnDisable() 
     {
-        Playermovement.Instance.onDeath -= OnDeath;
+        PlayerManager.Instance.onDeath -= OnDeath;
     }
 }

@@ -9,17 +9,13 @@ using UnityEngine.Playables;
 
 public class Playermovement : MonoBehaviour
 {
-    public static Playermovement Instance;
-    void Awake()
-    {
 
-    }
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
     Vector2 orginalPosition;
-    public Action onDeath;
+
     private float fcount;
 
 
@@ -31,14 +27,14 @@ public class Playermovement : MonoBehaviour
     [SerializeField] private Transform leftwallcheck;
     [SerializeField] private Transform position;
     [SerializeField] private AudioSource landing;
-    public GameObject Player;
+
 
 
     
     void Start()
     {
     orginalPosition = new Vector2(rb.transform.position.x, rb.transform.position.y);
-    gameObject.SetActive(false);
+
 
     }
     // Update is called once per frame
@@ -80,10 +76,10 @@ public class Playermovement : MonoBehaviour
             }
 
 
-            if (rb.transform.position.y < -20.3f)
+            if (PlayerManager.Instance.rb.transform.position.y < -20f)
             {
                 rb.transform.position = orginalPosition;
-                onDeath?.Invoke();
+                PlayerManager.Instance.onDeath?.Invoke();
             }
 
             Flip();
@@ -132,17 +128,14 @@ public class Playermovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.DrawWireCube(groundcheck.position, groundcheckup.position);
         Gizmos.DrawWireSphere(rightwallcheck.transform.position, 0.2f);
         Gizmos.DrawWireSphere(leftwallcheck.transform.position, 0.2f);
 
 
     }
 
-    public void SetPlayerPos(Vector3 newpos)
-    {
-        rb.velocity = Vector2.zero;
-        transform.position = newpos;
-    }
+
 
 
 }
