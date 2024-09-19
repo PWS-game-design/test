@@ -3541,7 +3541,7 @@ MonoBehaviour:
       - m_Target: {fileID: 431306315}
         m_TargetAssemblyTypeName: settings, Assembly-CSharp
         m_MethodName: SetMusic
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3810,7 +3810,7 @@ MonoBehaviour:
       - m_Target: {fileID: 431306315}
         m_TargetAssemblyTypeName: settings, Assembly-CSharp
         m_MethodName: SetSFX
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5329,7 +5329,7 @@ MonoBehaviour:
       - m_Target: {fileID: 431306315}
         m_TargetAssemblyTypeName: settings, Assembly-CSharp
         m_MethodName: SetVolume
-        m_Mode: 4
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
