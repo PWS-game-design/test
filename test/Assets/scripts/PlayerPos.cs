@@ -7,6 +7,6 @@ public class PlayerPos : MonoBehaviour
 {
     private void Start()
     {
-        Playermovement.Instance.SetPlayerPos(transform.position);
+        PlayerManager.Instance.SetPlayerPos(transform.position);
     }
 }

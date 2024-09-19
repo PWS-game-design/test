@@ -9,17 +9,7 @@ using UnityEngine.Playables;
 
 public class Playermovement : MonoBehaviour
 {
-    public static Playermovement Instance;
-    void Awake()
-    {
-        if(Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+
     private float horizontal;
     private float speed = 8f;
     private float jumpingPower = 16f;
@@ -29,7 +19,7 @@ public class Playermovement : MonoBehaviour
     private float fcount;
 
 
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;    
     [SerializeField] private Transform groundcheck;
     [SerializeField] private Transform groundcheckup;
     [SerializeField] private LayerMask groundlayer;
@@ -37,6 +27,7 @@ public class Playermovement : MonoBehaviour
     [SerializeField] private Transform leftwallcheck;
     [SerializeField] private Transform position;
     [SerializeField] private AudioSource landing;
+
 
 
     
@@ -49,6 +40,7 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
 
         
 
@@ -84,9 +76,10 @@ public class Playermovement : MonoBehaviour
             }
 
 
-            if (rb.transform.position.y < -20f)
+            if (PlayerManager.Instance.rb.transform.position.y < -20f)
             {
                 rb.transform.position = orginalPosition;
+                PlayerManager.Instance.onDeath?.Invoke();
             }
 
             Flip();
@@ -135,18 +128,14 @@ public class Playermovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(groundcheck.transform.position, 1.18f);
+        Gizmos.DrawWireCube(groundcheck.position, groundcheckup.position);
         Gizmos.DrawWireSphere(rightwallcheck.transform.position, 0.2f);
         Gizmos.DrawWireSphere(leftwallcheck.transform.position, 0.2f);
 
 
     }
 
-    public void SetPlayerPos(Vector3 newpos)
-    {
-        //rb.velocity = Vector2.zero;
-        transform.position = newpos;
-    }
+
 
 
 }

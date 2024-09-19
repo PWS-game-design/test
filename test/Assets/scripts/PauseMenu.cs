@@ -73,7 +73,7 @@ public class pausemenu : MonoBehaviour
     {
         Application.Quit();
     }
-    public void settingsmenu()
+    public void Settingsmenu()
     {
         if(settings == true)
         {
