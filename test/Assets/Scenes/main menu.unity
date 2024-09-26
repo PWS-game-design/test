@@ -4188,6 +4188,7 @@ GameObject:
   - component: {fileID: 1509036481}
   - component: {fileID: 1509036480}
   - component: {fileID: 1509036479}
+  - component: {fileID: 1509036485}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -4456,6 +4457,83 @@ Transform:
   - {fileID: 1108517175}
   m_Father: {fileID: 392104268}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1509036485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509036478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: walkingL
+    m_Hash: 0
+    m_CategoryList:
+    - m_Name: key1L
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_0
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_1
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_2
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: key2L
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_3
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_4
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+  - m_Name: walkingR
+    m_Hash: 0
+    m_CategoryList:
+    - m_Name: key1R
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_0
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_1
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_2
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: key2R
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_3
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_4
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+  - m_Name: idle
+    m_Hash: 0
+    m_CategoryList:
+    - m_Name: Entry
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+    - m_Name: Entry_0
+      m_Hash: 0
+      m_Sprite: {fileID: 0}
+  m_SpriteLibraryAsset: {fileID: 0}
 --- !u!1 &1552483772
 GameObject:
   m_ObjectHideFlags: 0
