@@ -11,8 +11,8 @@ public class Playermovement : MonoBehaviour
 {
 
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    private float speed = 8;
+    private float jumpingPower = 8f;
     private bool isFacingRight = true;
     Vector2 orginalPosition;
 
@@ -78,8 +78,10 @@ public class Playermovement : MonoBehaviour
 
             if (PlayerManager.Instance.rb.transform.position.y < -20f)
             {
-                rb.transform.position = orginalPosition;
+
+                
                 PlayerManager.Instance.onDeath?.Invoke();
+                rb.transform.position = orginalPosition;
             }
 
             Flip();
