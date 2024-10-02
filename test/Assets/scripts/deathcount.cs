@@ -53,7 +53,7 @@ public class deathcount : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(ParamL.transform.position, 1f);
-        Gizmos.DrawWireSphere(ParamR.transform.position, 1f);
+        Gizmos.DrawWireSphere(ParamL.transform.position, .25f);
+        Gizmos.DrawWireSphere(ParamR.transform.position, .25f);
     }
 }
