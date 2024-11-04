@@ -36,7 +36,7 @@ public class deathcount : MonoBehaviour
             count = count + 1;
             ValueText.text = count.ToString();
         }
-        if(count == 3)
+        if(count == 1)
         {
 
             AudioManager.instance.Play("CollinTheme");
