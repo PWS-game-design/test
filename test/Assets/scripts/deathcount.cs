@@ -17,6 +17,9 @@ public class deathcount : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject ParamL;
     public GameObject ParamR;
+    public string NextScene;
+    public string StopMusic;
+    public string StartMusic;
 
 
     // Start is called before the first frame update
@@ -39,10 +42,11 @@ public class deathcount : MonoBehaviour
         if(count == 1)
         {
 
-            AudioManager.instance.Play("CollinTheme");
-            AudioManager.instance.Stop("Theme");
-            SceneManager.LoadScene("Frosty-Quest");
-
+            AudioManager.instance.Play(StartMusic);
+            AudioManager.instance.Stop(StopMusic);
+            MainManager.Instance.LastScene = NextScene;
+            SceneManager.LoadScene(NextScene);
+             
         }
         
     }

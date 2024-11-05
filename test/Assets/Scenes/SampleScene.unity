@@ -2700,6 +2700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1348353a927244eae8e64bd79fec2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LastScene: 
 --- !u!1 &738889273
 GameObject:
   m_ObjectHideFlags: 0
@@ -6794,9 +6795,21 @@ PrefabInstance:
       value: deathcount
       objectReference: {fileID: 0}
     - target: {fileID: 4019742995663187089, guid: 40eaf41d753a102498b09d3144a25f88, type: 3}
+      propertyPath: NextScene
+      value: Frosty-Quest
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019742995663187089, guid: 40eaf41d753a102498b09d3144a25f88, type: 3}
+      propertyPath: StopMusic
+      value: Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019742995663187089, guid: 40eaf41d753a102498b09d3144a25f88, type: 3}
       propertyPath: ValueText
       value: 
       objectReference: {fileID: 1317628137}
+    - target: {fileID: 4019742995663187089, guid: 40eaf41d753a102498b09d3144a25f88, type: 3}
+      propertyPath: StartMusic
+      value: CollinTheme
+      objectReference: {fileID: 0}
     - target: {fileID: 7732289829750082585, guid: 40eaf41d753a102498b09d3144a25f88, type: 3}
       propertyPath: m_LocalPosition.x
       value: 195.1

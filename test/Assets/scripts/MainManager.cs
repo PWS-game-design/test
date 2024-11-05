@@ -9,8 +9,10 @@ public class MainManager : MonoBehaviour
     public Action <bool> onPauseChange;
     public bool abletopause {get; private set;}
     public static MainManager Instance;
+    public string LastScene;
     void Awake()
     {
+        LastScene = "SampleScene";
         if(Instance != null)
         {
             Destroy(gameObject);
