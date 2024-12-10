@@ -45,7 +45,14 @@ public class deathcount : MonoBehaviour
             AudioManager.instance.Play(StartMusic);
             AudioManager.instance.Stop(StopMusic);
             MainManager.Instance.LastScene = NextScene;
-            SceneManager.LoadScene(NextScene);
+
+            if (MainManager.Instance.LastScene == "first-art")
+            {
+                PlayerManager.Instance.playerrb.enabled = false;
+                PlayerManager.Instance.Playerrb.enabled = true;
+
+            }
+            SceneManager.LoadScene(NextScene);            
              
         }
         
