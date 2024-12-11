@@ -48,8 +48,9 @@ public class deathcount : MonoBehaviour
 
             if (MainManager.Instance.LastScene == "first-art")
             {
-                PlayerManager.Instance.playerrb.enabled = false;
+                PlayerManager.Instance.playerrb.enabled = true;
                 PlayerManager.Instance.Playerrb.enabled = true;
+                PlayerManager.Instance.building.SetActive(false);
 
             }
             SceneManager.LoadScene(NextScene);            

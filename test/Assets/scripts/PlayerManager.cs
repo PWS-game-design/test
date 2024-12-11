@@ -13,6 +13,7 @@ public class PlayerManager : MonoBehaviour
 
     public SpriteRenderer playerrb;
     public SpriteLibrary Playerrb;
+    public GameObject building;
 
     [SerializeField] public Rigidbody2D rb;
 
