@@ -14,6 +14,12 @@ public class PlayerManager : MonoBehaviour
     public SpriteRenderer playerrb;
     public SpriteLibrary Playerrb;
     public GameObject building;
+    public BoxCollider2D kimi;
+    public GameObject groundcheck;
+    public GameObject groundcheckup;
+    public GameObject kimigroundcheckup;
+    public GameObject kimigroundcheckdown;
+
 
     [SerializeField] public Rigidbody2D rb;
 
