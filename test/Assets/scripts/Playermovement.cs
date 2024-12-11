@@ -83,7 +83,7 @@ public class Playermovement : MonoBehaviour
                 orginalPosition = positionl.position;
                 PlayerManager.Instance.onDeath?.Invoke();
                 rb.transform.position = orginalPosition;
-                PlayerManager.Instance.SetPlayerPos(transform.position);
+
             }
 
             Flip();
