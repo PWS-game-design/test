@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.U2D.Animation;
 
 public class PlayerManager : MonoBehaviour
     
@@ -9,6 +10,17 @@ public class PlayerManager : MonoBehaviour
         public Action onDeath;
     public static PlayerManager Instance;
     public GameObject Player;
+
+    public SpriteRenderer playerrb;
+    public SpriteLibrary Playerrb;
+    public GameObject building;
+    public BoxCollider2D kimi;
+    public GameObject groundcheck;
+    public GameObject groundcheckup;
+    public GameObject kimigroundcheckup;
+    public GameObject kimigroundcheckdown;
+
+
     [SerializeField] public Rigidbody2D rb;
 
     void Awake()
@@ -24,7 +36,7 @@ public class PlayerManager : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

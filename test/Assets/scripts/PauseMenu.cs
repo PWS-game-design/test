@@ -10,6 +10,7 @@ public class pausemenu : MonoBehaviour
     public GameObject pauseMenu;
     public static bool isPaused;
     static bool settings;
+    public float mod = 0;
     // Start is called before the first frame update
         public static pausemenu instance;
 
@@ -83,5 +84,9 @@ public class pausemenu : MonoBehaviour
         {
             settings = true;
         }
+    }
+    public void Nextscene()
+    {
+        mod = 1;
     }
 }

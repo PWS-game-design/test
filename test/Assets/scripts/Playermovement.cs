@@ -17,7 +17,7 @@ public class Playermovement : MonoBehaviour
     Vector2 orginalPosition;
 
     private float fcount;
-
+    private Transform positionl;
 
     [SerializeField] public Rigidbody2D rb;    
     [SerializeField] private Transform groundcheck;
@@ -25,7 +25,7 @@ public class Playermovement : MonoBehaviour
     [SerializeField] private LayerMask groundlayer;
     [SerializeField] private Transform rightwallcheck;
     [SerializeField] private Transform leftwallcheck;
-    [SerializeField] private Transform position;
+
     [SerializeField] private AudioSource landing;
 
 
@@ -33,7 +33,7 @@ public class Playermovement : MonoBehaviour
     
     void Start()
     {
-    orginalPosition = new Vector2(rb.transform.position.x, rb.transform.position.y);
+
 
 
     }
@@ -79,9 +79,11 @@ public class Playermovement : MonoBehaviour
             if (PlayerManager.Instance.rb.transform.position.y < -20f)
             {
 
-                
+                positionl = GameObject.FindWithTag("Respawn").transform;
+                orginalPosition = positionl.position;
                 PlayerManager.Instance.onDeath?.Invoke();
                 rb.transform.position = orginalPosition;
+
             }
 
             Flip();
