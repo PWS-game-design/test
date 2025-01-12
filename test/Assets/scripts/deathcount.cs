@@ -50,7 +50,6 @@ public class deathcount : MonoBehaviour
             if (MainManager.Instance.LastScene == "first-art")
             {
                 PlayerManager.Instance.playerrb.enabled = true;
-                PlayerManager.Instance.Playerrb.enabled = true;
                 PlayerManager.Instance.building.SetActive(false);
                 PlayerManager.Instance.kimi.size = new Vector3(1.110668f, 4.251835f, 0f);
                 PlayerManager.Instance.kimi.offset = new Vector3(0.2057747f, -1.075917f, 0f);

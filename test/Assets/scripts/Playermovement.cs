@@ -15,7 +15,7 @@ public class Playermovement : MonoBehaviour
     private float jumpingPower = 9f;
     private bool isFacingRight = true;
     Vector2 orginalPosition;
-
+    //private bool IsGrounded;
     private float fcount;
     private Transform positionl;
 
@@ -28,12 +28,12 @@ public class Playermovement : MonoBehaviour
 
     [SerializeField] private AudioSource landing;
 
-
+    Animator animator;
 
     
     void Start()
     {
-
+        animator = GetComponent<Animator>();
 
 
     }
@@ -58,6 +58,7 @@ public class Playermovement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                animator.SetBool("isJumping", !IsGrounded());
             }
 
             if (Input.GetButtonDown("Jump") && rightwall())
@@ -100,6 +101,8 @@ public class Playermovement : MonoBehaviour
         if (!pausemenu.isPaused)
         {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
         }
     }
 
