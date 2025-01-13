@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
+using Unity.Mathematics;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEditor;
 using UnityEngine;
@@ -15,7 +16,6 @@ public class Playermovement : MonoBehaviour
     private float jumpingPower = 9f;
     private bool isFacingRight = true;
     Vector2 orginalPosition;
-    //private bool IsGrounded;
     private float fcount;
     private Transform positionl;
 
@@ -28,12 +28,13 @@ public class Playermovement : MonoBehaviour
 
     [SerializeField] private AudioSource landing;
 
-    Animator animator;
+    [SerializeField] Animator animator;
+    
 
     
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 
 
     }
@@ -50,13 +51,15 @@ public class Playermovement : MonoBehaviour
             fcount++;
         }
         {
-
-
+            //if (IsGrounded())
+            //{
+                //animator.SetBool("isJumping", !IsGrounded());
+            //}
 
             horizontal = Input.GetAxisRaw("Horizontal");
-
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
+
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 animator.SetBool("isJumping", !IsGrounded());
             }

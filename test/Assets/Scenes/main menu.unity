@@ -4497,6 +4497,7 @@ MonoBehaviour:
   rightwallcheck: {fileID: 1754219437}
   leftwallcheck: {fileID: 396538241}
   landing: {fileID: 1509036479}
+  animator: {fileID: 1509036486}
 --- !u!61 &1509036481
 BoxCollider2D:
   m_ObjectHideFlags: 0
