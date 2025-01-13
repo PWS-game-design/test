@@ -12,7 +12,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject Player;
 
     public SpriteRenderer playerrb;
-    public SpriteLibrary Playerrb;
+
     public GameObject building;
     public BoxCollider2D kimi;
     public GameObject groundcheck;
