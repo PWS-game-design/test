@@ -29,7 +29,8 @@ public class Playermovement : MonoBehaviour
     [SerializeField] private AudioSource landing;
 
     [SerializeField] Animator animator;
-    
+
+    bool isGrounded;
 
     
     void Start()
@@ -50,18 +51,21 @@ public class Playermovement : MonoBehaviour
         {
             fcount++;
         }
-        {
-            //if (IsGrounded())
-            //{
-                //animator.SetBool("isJumping", !IsGrounded());
-            //}
+        {   
+
+
 
             horizontal = Input.GetAxisRaw("Horizontal");
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
 
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                animator.SetBool("isJumping", IsGrounded());
+            }
+            else
+            {
                 animator.SetBool("isJumping", !IsGrounded());
+
             }
 
             if (Input.GetButtonDown("Jump") && rightwall())
