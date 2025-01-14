@@ -1985,7 +1985,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 392104267}
   playerrb: {fileID: 1509036483}
-  Playerrb: {fileID: 0}
   building: {fileID: 2047709266}
   kimi: {fileID: 1509036481}
   groundcheck: {fileID: 195307307}
@@ -4876,7 +4875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1558246888
 RectTransform:
   m_ObjectHideFlags: 0
