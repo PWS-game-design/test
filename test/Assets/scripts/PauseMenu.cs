@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -11,6 +12,7 @@ public class pausemenu : MonoBehaviour
     public static bool isPaused;
     static bool settings;
     public float mod = 0;
+    public List<GameObject> currentmenu = new();
     // Start is called before the first frame update
         public static pausemenu instance;
 
@@ -50,7 +52,20 @@ public class pausemenu : MonoBehaviour
             {
                 PauseGame();
             }
+
                 
+        }
+        
+        else if (Input.GetKeyDown(KeyCode.Escape) && settings == true)
+        {
+            if(currentmenu[currentmenu.Count - 1].name == "settings menu")
+            {
+                Settingsmenu();
+            }
+
+            RemoveCurrentMenu();
+            MenuManager.instance.ReturnToLastMenu();
+
         }
     }
 
@@ -61,12 +76,12 @@ public class pausemenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
-        public void PauseGame()
+    public void PauseGame()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-    }
+    } 
 
 
 
@@ -88,5 +103,21 @@ public class pausemenu : MonoBehaviour
     public void Nextscene()
     {
         mod = 1;
+    }
+    public void Addcurrentmenu(GameObject obj)
+    {
+        currentmenu.Add(obj);
+    }
+    
+        public void RemoveCurrentMenu()
+    {
+        int count = currentmenu.Count - 1;
+        currentmenu[count].SetActive(false);
+        currentmenu.RemoveAt(count);
+
+    }
+    public void Clear()
+    {
+        currentmenu.Clear();
     }
 }

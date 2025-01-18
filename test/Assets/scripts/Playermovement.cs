@@ -122,12 +122,12 @@ public class Playermovement : MonoBehaviour
     
     private bool rightwall()
     {
-        return Physics2D.OverlapCircle(rightwallcheck.position, 0.2f, groundlayer);
+        return Physics2D.OverlapCircle(rightwallcheck.position, 1f, groundlayer);
     }
 
     private bool leftwall()
     {
-        return Physics2D.OverlapCircle(leftwallcheck.position, 0.2f, groundlayer);
+        return Physics2D.OverlapCircle(leftwallcheck.position, 1f, groundlayer);
 
     }
 
@@ -145,8 +145,8 @@ public class Playermovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireCube(groundcheck.position, groundcheckup.position);
-        Gizmos.DrawWireSphere(rightwallcheck.transform.position, 0.2f);
-        Gizmos.DrawWireSphere(leftwallcheck.transform.position, 0.2f);
+        Gizmos.DrawWireSphere(rightwallcheck.transform.position, 1f);
+        Gizmos.DrawWireSphere(leftwallcheck.transform.position, 1f);
 
 
     }

@@ -869,9 +869,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 166307891}
-        m_TargetAssemblyTypeName: deathcount, Assembly-CSharp
-        m_MethodName: Nextscene
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166307886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f81d1e310f816e489f18e5c2ee75a5b, type: 3}
   m_Name: 
@@ -1066,6 +1066,18 @@ MonoBehaviour:
       - m_Target: {fileID: 431306317}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: ReturnToLastMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: RemoveCurrentMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1469,6 +1481,30 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 83837872}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Settingsmenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Addcurrentmenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1720819964}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1892,6 +1928,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Settingsmenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: RemoveCurrentMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4184,6 +4244,30 @@ MonoBehaviour:
           m_StringArgument: credits
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Addcurrentmenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1720819964}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Settingsmenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1403196829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5103,6 +5187,18 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1720819964}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Addcurrentmenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 526025002}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6557,6 +6653,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Settingsmenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1972994363}
+        m_TargetAssemblyTypeName: pausemenu, Assembly-CSharp
+        m_MethodName: Clear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1904946123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6785,6 +6905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 83837872}
   mod: 0
+  currentmenu: []
 --- !u!114 &1972994364
 MonoBehaviour:
   m_ObjectHideFlags: 0
