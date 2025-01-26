@@ -62,5 +62,6 @@ public class CollinPatrol : MonoBehaviour
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        Gizmos.DrawWireSphere(transform.position, .5f);
     }
 }

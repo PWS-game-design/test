@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class doorway : MonoBehaviour
 {
@@ -12,15 +13,24 @@ public class doorway : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       Instance = this; 
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Doorway();
     }
     
+    private void Doorway()
+    {
+        if(PlayerManager.Instance.rb.transform.position.x > ParamL.transform.position.x && PlayerManager.Instance.transform.position.x < ParamR.transform.position.x && Input.GetKeyDown(KeyCode.E))
+        {
+            
+            MainManager.Instance.LastScene = Nextscene;
+            SceneManager.LoadScene(Nextscene);
+        }
+    }
 
     private void OnDrawGizmos()
     {
