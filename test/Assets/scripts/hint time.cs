@@ -12,7 +12,8 @@ public class hinttime : MonoBehaviour
     // 1 = rechts van
     // 2 = links van
     // 3 = onder
-    // 4 is boven
+    // 4 = boven
+    // 5 = onder en rechts van
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,11 @@ public class hinttime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerManager.Instance.rb.transform.position.x > hintposition.transform.position.x && wichcondition == 1 || PlayerManager.Instance.rb.transform.position.x < hintposition.transform.position.x && wichcondition == 2 || PlayerManager.Instance.rb.transform.position.y < hintposition.transform.position.y && wichcondition == 3 || PlayerManager.Instance.rb.transform.position.y > hintposition.transform.position.y && wichcondition == 4)
+        if (PlayerManager.Instance.rb.transform.position.x > hintposition.transform.position.x && wichcondition == 1 || 
+        PlayerManager.Instance.rb.transform.position.x < hintposition.transform.position.x && wichcondition == 2 || 
+        PlayerManager.Instance.rb.transform.position.y < hintposition.transform.position.y && wichcondition == 3 || 
+        PlayerManager.Instance.rb.transform.position.y > hintposition.transform.position.y && wichcondition == 4 || 
+        PlayerManager.Instance.rb.transform.position.y < hintposition.transform.position.y && PlayerManager.Instance.transform.position.x > hintposition.transform.position.x && wichcondition == 5)
         {
             starttime += Time.deltaTime;
         }

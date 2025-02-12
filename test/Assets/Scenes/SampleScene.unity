@@ -2860,6 +2860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 738824450}
   mod: 0
+  currentmenu: []
 --- !u!114 &738824455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4280,6 +4281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 738824450}
   mod: 0
+  currentmenu: []
 --- !u!1 &1090437124
 GameObject:
   m_ObjectHideFlags: 0
@@ -6002,7 +6004,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ead16e6724f0c49a3c195aa30352f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starttime: 0
   hintposition: {fileID: 1925150815}
   text: {fileID: 2101868511}
   wichcondition: 1
@@ -7145,10 +7146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ead16e6724f0c49a3c195aa30352f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starttime: 0
   hintposition: {fileID: 2130041803}
   text: {fileID: 557646154}
-  wichcondition: 3
+  wichcondition: 5
 --- !u!4 &2130041806
 Transform:
   m_ObjectHideFlags: 0
@@ -7158,7 +7158,7 @@ Transform:
   m_GameObject: {fileID: 2130041803}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 186.4133, y: 8.460268, z: -2.6811037}
+  m_LocalPosition: {x: 179.47, y: 8.18, z: -2.6811037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
