@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Unity.VisualScripting;
+using UnityEngine.UI;
+using TMPro;
 public class MainManager : MonoBehaviour
 {
 
@@ -10,6 +12,10 @@ public class MainManager : MonoBehaviour
     public bool abletopause {get; private set;}
     public static MainManager Instance;
     public string LastScene;
+    public TMP_InputField iField;
+    public GameObject adminB;
+    string admin;
+
     void Awake()
     {
         LastScene = "SampleScene";
@@ -24,7 +30,15 @@ public class MainManager : MonoBehaviour
         onPauseChange += PlayerState;
     }
 
+    public void Admin()
+    {
 
+        admin = iField.text;
+        if(admin == "NIMDA")
+        {
+            adminB.SetActive(true);
+        }
+    }
 
 
 
