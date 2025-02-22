@@ -96,7 +96,7 @@ public class Playermovement : MonoBehaviour
             }
 
             Flip();
-            Doorway();
+
         }
         if (!IsGrounded() && fcount > 550)
         {
@@ -151,15 +151,7 @@ public class Playermovement : MonoBehaviour
 
     }
 
-    private void Doorway()
-    {
-        if (rb.transform.position.x > doorway.Instance.ParamL.transform.position.x && rb.transform.position.x < doorway.Instance.ParamR.transform.position.x && Input.GetKeyDown(KeyCode.E))
-        {   
-            MainManager.Instance.LastScene = doorway.Instance.Nextscene;
-            SceneManager.LoadScene(doorway.Instance.Nextscene);
-        }
-    }
-
+    
 
 
 
