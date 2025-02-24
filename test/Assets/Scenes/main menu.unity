@@ -328,10 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -356,7 +356,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -2567,7 +2567,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LastScene: 
-  iField: {fileID: 2026878163}
   adminB: {fileID: 1558246887}
 --- !u!114 &431306317
 MonoBehaviour:
@@ -3617,7 +3616,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -5697,7 +5696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 878.3, y: -485.05}
+  m_AnchoredPosition: {x: 880, y: -524.7802}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558246889
@@ -8367,6 +8366,7 @@ GameObject:
   - component: {fileID: 2026878165}
   - component: {fileID: 2026878164}
   - component: {fileID: 2026878163}
+  - component: {fileID: 2026878166}
   m_Layer: 5
   m_Name: InputField (TMP)
   m_TagString: Untagged
@@ -8456,8 +8456,8 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 431306316}
-        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+      - m_Target: {fileID: 2026878166}
+        m_TargetAssemblyTypeName: activationcodes, Assembly-CSharp
         m_MethodName: Admin
         m_Mode: 1
         m_Arguments:
@@ -8542,6 +8542,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026878161}
   m_CullTransparentMesh: 1
+--- !u!114 &2026878166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026878161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa882f2000ae2d4e98d709153f87913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iField: {fileID: 2026878163}
 --- !u!1 &2041763418
 GameObject:
   m_ObjectHideFlags: 0

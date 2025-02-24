@@ -12,9 +12,8 @@ public class MainManager : MonoBehaviour
     public bool abletopause {get; private set;}
     public static MainManager Instance;
     public string LastScene;
-    public TMP_InputField iField;
     public GameObject adminB;
-    string admin;
+
 
     void Awake()
     {
@@ -30,15 +29,7 @@ public class MainManager : MonoBehaviour
         onPauseChange += PlayerState;
     }
 
-    public void Admin()
-    {
 
-        admin = iField.text;
-        if(admin == "NIMDA")
-        {
-            adminB.SetActive(true);
-        }
-    }
 
 
 
