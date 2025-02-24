@@ -573,7 +573,7 @@ PrefabInstance:
       objectReference: {fileID: 1510611656}
     - target: {fileID: 4019742995663187089, guid: 40eaf41d753a102498b09d3144a25f88, type: 3}
       propertyPath: StartMusic
-      value: Theme
+      value: first art
       objectReference: {fileID: 0}
     - target: {fileID: 7732289829750082585, guid: 40eaf41d753a102498b09d3144a25f88, type: 3}
       propertyPath: m_LocalPosition.x
