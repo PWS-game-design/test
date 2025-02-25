@@ -9,6 +9,8 @@ public class doorway : MonoBehaviour
     public GameObject ParamL;
     public GameObject ParamR;
     public string Nextscene;
+    public string StopMusic;
+    public string StartMusic;
     
     // Start is called before the first frame update
     void Start()
@@ -26,9 +28,11 @@ public class doorway : MonoBehaviour
     {
         if(PlayerManager.Instance.rb.transform.position.x > ParamL.transform.position.x && PlayerManager.Instance.transform.position.x < ParamR.transform.position.x && Input.GetKeyDown(KeyCode.E))
         {
-            
+            AudioManager.instance.Play(StartMusic);
+            AudioManager.instance.Stop(StopMusic);
             MainManager.Instance.LastScene = Nextscene;
             SceneManager.LoadScene(Nextscene);
+
         }
     }
 
