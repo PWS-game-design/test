@@ -28,7 +28,7 @@ public class hinttime : MonoBehaviour
         PlayerManager.Instance.rb.transform.position.x < hintposition.transform.position.x && wichcondition == 2 || 
         PlayerManager.Instance.rb.transform.position.y < hintposition.transform.position.y && wichcondition == 3 || 
         PlayerManager.Instance.rb.transform.position.y > hintposition.transform.position.y && wichcondition == 4 || 
-        PlayerManager.Instance.rb.transform.position.y < hintposition.transform.position.y && PlayerManager.Instance.transform.position.x > hintposition.transform.position.x && wichcondition == 5)
+        PlayerManager.Instance.rb.transform.position.y < hintposition.transform.position.y && PlayerManager.Instance.rb.transform.position.x > hintposition.transform.position.x && wichcondition == 5)
         {
             starttime += Time.deltaTime;
         }
