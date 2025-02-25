@@ -680,6 +680,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorway
       objectReference: {fileID: 0}
+    - target: {fileID: 6155176678910093726, guid: 7ff0f35334e41d84785a9ebbdce6b266, type: 3}
+      propertyPath: StopMusic
+      value: first art
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155176678910093726, guid: 7ff0f35334e41d84785a9ebbdce6b266, type: 3}
+      propertyPath: StartMusic
+      value: heartbeat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

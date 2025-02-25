@@ -2532,6 +2532,13 @@ MonoBehaviour:
     loop: 1
     output: {fileID: 9021298665481224572, guid: 5f0c75e9da20602438d3b1d6a5cbdf90, type: 2}
     source: {fileID: 0}
+  - name: heartbeat
+    clip: {fileID: 8300000, guid: c690f3956b797504196fe846ab0dc8ab, type: 3}
+    volume: 4
+    pitch: 1
+    loop: 1
+    output: {fileID: 9021298665481224572, guid: 5f0c75e9da20602438d3b1d6a5cbdf90, type: 2}
+    source: {fileID: 0}
 --- !u!4 &431306314
 Transform:
   m_ObjectHideFlags: 0

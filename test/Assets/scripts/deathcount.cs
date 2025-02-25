@@ -40,7 +40,7 @@ public class deathcount : MonoBehaviour
             count = count + 1;
             ValueText.text = count.ToString();
         }
-        if(count == 3 || pausemenu.instance.mod == 1)
+        if(count == 2 || pausemenu.instance.mod == 1)
         {
 
             AudioManager.instance.Play(StartMusic);

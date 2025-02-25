@@ -1445,6 +1445,14 @@ PrefabInstance:
       propertyPath: Nextscene
       value: background-addition
       objectReference: {fileID: 0}
+    - target: {fileID: 6155176678910093726, guid: 7ff0f35334e41d84785a9ebbdce6b266, type: 3}
+      propertyPath: StopMusic
+      value: heartbeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6155176678910093726, guid: 7ff0f35334e41d84785a9ebbdce6b266, type: 3}
+      propertyPath: StartMusic
+      value: first art
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
