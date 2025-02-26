@@ -29,6 +29,7 @@ public class doorway : MonoBehaviour
         if(PlayerManager.Instance.rb.transform.position.x > ParamL.transform.position.x && PlayerManager.Instance.transform.position.x < ParamR.transform.position.x && Input.GetKeyDown(KeyCode.E))
         {
             AudioManager.instance.Play(StartMusic);
+            MainManager.Instance.currentsong = StartMusic;
             AudioManager.instance.Stop(StopMusic);
             MainManager.Instance.LastScene = Nextscene;
             SceneManager.LoadScene(Nextscene);

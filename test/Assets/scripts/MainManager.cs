@@ -13,6 +13,7 @@ public class MainManager : MonoBehaviour
     public static MainManager Instance;
     public string LastScene;
     public GameObject adminB;
+    public string currentsong = "Theme";
 
 
     void Awake()
