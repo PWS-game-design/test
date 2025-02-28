@@ -4,29 +4,42 @@ using UnityEngine;
 
 public class randomintervals : MonoBehaviour
 {
-    float timer;
+    public float timer;
+    public float wait;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        timer = Random.Range(5, 20);
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if(timer <= 0)
         {
-            //AudioManager.instance.Stop(MainManager.Instance.currentsong);
-            AudioManager.instance.Pause();
+
+            AudioManager.instance.Pause(MainManager.Instance.currentsong);
             AudioManager.instance.Play("something");
-            timer = Random.Range(20, 300);
-            Wait();
-            //AudioManager.instance.Play(MainManager.Instance.currentsong);
+            wait = 73.848f;            
+            timer = Random.Range(120, 180);
         }
-        timer -= Time.deltaTime;
+        
+        if(wait <= 0)
+        {
+            timer -= Time.deltaTime;
+        }
+        
+        if(wait < 0)
+        {
+            AudioManager.instance.UnPause(MainManager.Instance.currentsong);
+        }
+        
+        if (wait > 0)
+        {
+            wait -= Time.deltaTime;
+        }
+
     }
-    IEnumerator Wait()
-    {
-        yield return new WaitForSecondsRealtime(10);
-    }
+
 }

@@ -13,7 +13,7 @@ public class MainManager : MonoBehaviour
     public static MainManager Instance;
     public string LastScene;
     public GameObject adminB;
-    public string currentsong = "Theme";
+    public string currentsong;
 
 
     void Awake()
@@ -28,6 +28,7 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Changepause(false);
         onPauseChange += PlayerState;
+        currentsong = "Theme";
     }
 
 

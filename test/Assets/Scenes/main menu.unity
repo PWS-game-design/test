@@ -2491,6 +2491,7 @@ GameObject:
   - component: {fileID: 431306316}
   - component: {fileID: 431306315}
   - component: {fileID: 431306317}
+  - component: {fileID: 431306318}
   m_Layer: 0
   m_Name: MainManager
   m_TagString: Untagged
@@ -2539,6 +2540,13 @@ MonoBehaviour:
     loop: 1
     output: {fileID: 9021298665481224572, guid: 5f0c75e9da20602438d3b1d6a5cbdf90, type: 2}
     source: {fileID: 0}
+  - name: something
+    clip: {fileID: 8300000, guid: 68adb6e510ad2b648972dbf4fff2e99c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    output: {fileID: -3209325663412256653, guid: 5f0c75e9da20602438d3b1d6a5cbdf90, type: 2}
+    source: {fileID: 0}
 --- !u!4 &431306314
 Transform:
   m_ObjectHideFlags: 0
@@ -2582,6 +2590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LastScene: 
   adminB: {fileID: 1558246887}
+  currentsong: Theme
 --- !u!114 &431306317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2595,6 +2604,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menus: []
+--- !u!114 &431306318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431306312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c74ecd84e3964f4fa9a9d7e8c786b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+  wait: 0
 --- !u!1 &490717323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4373,7 +4396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: 388}
+  m_AnchoredPosition: {x: 0, y: 388}
   m_SizeDelta: {x: -1467.2218, y: -937.4594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146206704
