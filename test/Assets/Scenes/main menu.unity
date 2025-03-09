@@ -2547,6 +2547,13 @@ MonoBehaviour:
     loop: 0
     output: {fileID: -3209325663412256653, guid: 5f0c75e9da20602438d3b1d6a5cbdf90, type: 2}
     source: {fileID: 0}
+  - name: something 2
+    clip: {fileID: 8300000, guid: 38601c93223b28441bd53ee9c33d6281, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    output: {fileID: -3209325663412256653, guid: 5f0c75e9da20602438d3b1d6a5cbdf90, type: 2}
+    source: {fileID: 0}
 --- !u!4 &431306314
 Transform:
   m_ObjectHideFlags: 0
