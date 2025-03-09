@@ -44,6 +44,7 @@ public class deathcount : MonoBehaviour
         {
 
             AudioManager.instance.Play(StartMusic);
+            MainManager.Instance.currentsong = StartMusic;
             AudioManager.instance.Stop(StopMusic);
             MainManager.Instance.LastScene = NextScene;
             pausemenu.instance.mod = 0;
