@@ -88,10 +88,11 @@ public class Playermovement : MonoBehaviour
             if (PlayerManager.Instance.rb.transform.position.y < -20f)
             {
 
-                positionl = GameObject.FindWithTag("Respawn").transform;
-                orginalPosition = positionl.position;
+                //positionl = GameObject.FindWithTag("Respawn").transform;
+                //orginalPosition = positionl.position;
                 PlayerManager.Instance.onDeath?.Invoke();
-                rb.transform.position = orginalPosition;
+                //rb.transform.position = orginalPosition;
+                PlayerManager.Instance.SetPlayerPos(GameObject.FindWithTag("Respawn").transform.position);
 
             }
 
