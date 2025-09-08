@@ -2625,6 +2625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 0
   wait: 0
+  muziek: 0
 --- !u!1 &490717323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4319,10 +4320,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 84511652}
   m_HandleRect: {fileID: 115422281}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4671,10 +4672,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1637283471}
   m_HandleRect: {fileID: 1848630187}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6885,10 +6886,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1726244043}
   m_HandleRect: {fileID: 134651222}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.0001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class doorway : MonoBehaviour
 {
-    public static doorway Instance;
+    //public static doorway Instance;
     public GameObject ParamL;
     public GameObject ParamR;
     public string Nextscene;
@@ -23,10 +23,10 @@ public class doorway : MonoBehaviour
     {
         Doorway();
     }
-    
+
     private void Doorway()
     {
-        if(PlayerManager.Instance.rb.transform.position.x > ParamL.transform.position.x && PlayerManager.Instance.transform.position.x < ParamR.transform.position.x && Input.GetKeyDown(KeyCode.E))
+        if (PlayerManager.Instance.rb.transform.position.x > ParamL.transform.position.x && PlayerManager.Instance.rb.transform.position.x < ParamR.transform.position.x && Input.GetKeyDown(KeyCode.E))
         {
             AudioManager.instance.Play(StartMusic);
             MainManager.Instance.currentsong = StartMusic;
@@ -35,6 +35,7 @@ public class doorway : MonoBehaviour
             SceneManager.LoadScene(Nextscene);
 
         }
+
     }
 
     private void OnDrawGizmos()

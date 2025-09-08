@@ -48,6 +48,6 @@ public class PlayerManager : MonoBehaviour
         public void SetPlayerPos(Vector3 newpos)
     {
         rb.velocity = Vector2.zero;
-        transform.position = newpos;
+        rb.transform.position = newpos;
     }
 }
