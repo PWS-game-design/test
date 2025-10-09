@@ -13,6 +13,7 @@ public class deathcount : MonoBehaviour
     int count = 0;
 
 
+
     public TextMeshProUGUI ValueText;
     private Rigidbody2D rb;
     public GameObject ParamL;
@@ -35,7 +36,7 @@ public class deathcount : MonoBehaviour
     private void OnDeath()
     {
 
-        if(PlayerManager.Instance.rb.transform.position.x < ParamR.transform.position.x && PlayerManager.Instance.rb.transform.position.x > ParamL.transform.position.x)
+        if (PlayerManager.Instance.rb.transform.position.x < ParamR.transform.position.x && PlayerManager.Instance.rb.transform.position.x > ParamL.transform.position.x)
         {
             count = count + 1;
             ValueText.text = count.ToString();

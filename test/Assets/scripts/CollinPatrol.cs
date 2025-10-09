@@ -21,26 +21,26 @@ public class CollinPatrol : MonoBehaviour
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
-        if(rb.velocity.y > 0f)
+        if(rb.linearVelocity.y > 0f)
         {
             if(currentPoint == pointB.transform)
             {
-                rb.velocity = new Vector2(speed, rb.velocity.y * 0.5f);
+                rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y * 0.5f);
             }
             else
             {
-                rb.velocity = new Vector2(-speed, rb.velocity.y * 0.5f);
+                rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y * 0.5f);
             }
         }
         else
         {
             if(currentPoint == pointB.transform)
             {
-                rb.velocity = new Vector2(speed, rb.velocity.y);
+                rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
             }
             else
             {
-                rb.velocity = new Vector2(-speed, rb.velocity.y);
+                rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
             }
         }
 
